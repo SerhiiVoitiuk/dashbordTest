@@ -8,4 +8,4 @@ This project was built using the following main technologies:
 * **Language:** TypeScript
 
 ## AI Tools Used
-* ChatGPT (Likely a model like GPT-3 or GPT-4)
+* ChatGPT (Likely a model like GPT-3 and GPT-4)
