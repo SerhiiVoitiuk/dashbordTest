@@ -20,6 +20,7 @@ export const columns: ColumnDef<WorkItem>[] = [
             text={originator === "Me" ? "ME" : getInitials(originator)}
             size="8"
             textSize="text-xs"
+            isBorder={false}
           />
           <div>{originator}</div>
         </div>

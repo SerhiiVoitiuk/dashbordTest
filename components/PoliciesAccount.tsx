@@ -1,12 +1,10 @@
-"use client"
-import React, { useState } from 'react'
-import data from '../data.json';
-import { PoliciesTable } from './PoliciesTable';
-import { columns } from './PoliciesColumns';
+"use client";
 
 
-const PoliciesAccount = () => {
-  const [policiesData] = useState(data.policies);
+import { PoliciesTable } from "./PoliciesTable";
+import { columns } from "./PoliciesColumns";
+
+const PoliciesAccount = ({ policiesData }: {policiesData: PoliciesData[]}) => {
 
   return (
     <div className="flex flex-col mt-10.5">

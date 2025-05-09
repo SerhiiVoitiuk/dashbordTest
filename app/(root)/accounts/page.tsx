@@ -7,9 +7,13 @@ import ComplianceDocumentation from "@/components/ComplianceDocumentation";
 import PerformanceMetrics from "@/components/PerformanceMetrics";
 import Policies from "@/components/Policies";
 import PoliciesAccount from "@/components/PoliciesAccount";
+import { getPoliciesData } from "@/lib/actions/data";
 import React from "react";
 
-const Page = () => {
+const Page = async () => {
+  const policiesData = await getPoliciesData();
+
+
   return (
     <section className="flex flex-col mt-9 mb-10">
       <Breadcrumbs />
@@ -24,7 +28,7 @@ const Page = () => {
 
       <AccountDetails />
       <Communication />
-      <PoliciesAccount />
+      <PoliciesAccount policiesData={policiesData} />
     </section>
   );
 };

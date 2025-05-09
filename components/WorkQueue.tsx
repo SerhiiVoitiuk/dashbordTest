@@ -3,13 +3,11 @@
 import { useState } from "react";
 import WorkButton from "./WorkButton";
 import { buttonWorkData } from "@/constants";
-import data from '../data.json';
 import { columns } from "./WorkColumns";
 import { WorkTable } from "./WorkTable";
 
 
-const WorkQueue = () => {
-  const [workData] = useState(data.work);
+const WorkQueue = ({ workData }: { workData: WorkItem[] }) => {
   const [activeButton, setActiveButton] = useState<number>(0);
 
   const handleButtonClick = (index: number) => {

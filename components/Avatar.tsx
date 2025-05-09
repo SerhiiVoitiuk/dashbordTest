@@ -5,6 +5,7 @@ type AvatarProps = {
   size?: string;
   bgColor?: string;
   textSize?: string;
+  isBorder?: boolean;
 };
 
 const Avatar = ({
@@ -12,10 +13,11 @@ const Avatar = ({
   size = "12",
   bgColor = "bg-blue-fade",
   textSize = "text-xl",
+  isBorder = true,
 }: AvatarProps) => {
   return (
     <div
-      className={`${bgColor} rounded-full w-${size} h-${size} flex justify-center items-center border border-[#000000]`}
+      className={`${bgColor} rounded-full w-${size} h-${size} flex justify-center items-center ${isBorder ? 'border border-[#000000]' : ''}`}
     >
       <p className={`${textSize} text-white p-2`}>{text}</p>
     </div>
